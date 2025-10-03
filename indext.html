@@ -1,0 +1,235 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Eyimegwu Odinaka Godspower — Portfolio</title>
+<style>
+  :root{
+    --accent:#25D366;
+    --bg1:#0f1724;
+    --bg2:#12263f;
+    --card: rgba(255,255,255,0.06);
+    --muted: rgba(255,255,255,0.75);
+    --pop-shadow: 0 10px 30px rgba(2,6,23,0.6);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#fff;background:
+    linear-gradient(180deg,var(--bg1),var(--bg2));scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+  nav{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:1200;background:rgba(0,0,0,0.35);
+      padding:8px 14px;border-radius:999px;backdrop-filter:blur(6px);display:flex;gap:12px;align-items:center}
+  nav a{color:#fff;text-decoration:none;font-weight:600;padding:8px 10px;border-radius:8px;opacity:0.95}
+  nav a:hover{background:rgba(255,255,255,0.06);color:var(--accent)}
+  section{min-height:100vh;padding:100px 18px 64px;display:flex;align-items:center;justify-content:center}
+  .container{max-width:1100px;width:100%;margin:0 auto;padding:0 18px}
+  h1,h2{margin:0 0 12px 0;letter-spacing:0.2px}
+  p{color:var(--muted);line-height:1.5}
+
+  .home .card{background:linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+               padding:28px;border-radius:14px;display:flex;gap:20px;align-items:center;box-shadow:var(--pop-shadow)}
+  .avatar{width:120px;height:120px;border-radius:50%;overflow:hidden;border:3px solid rgba(255,255,255,0.12);flex:0 0 120px}
+  .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+  .home .meta{flex:1;text-align:left}
+  .name{font-size:20px;font-weight:800}
+  .role{font-weight:600;color:var(--accent);margin-top:6px}
+  .cta{margin-top:12px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{background:var(--accent);color:#042217;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+  .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.08);color:#fff}
+
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+  .about-photo{border-radius:12px;overflow:hidden;border:4px solid rgba(255,255,255,0.06)}
+  .about-photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+  .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}
+  .skills-list{background:var(--card);padding:18px;border-radius:12px}
+  .skill{padding:10px 12px;border-radius:8px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;
+         transition:transform .25s, background .25s;cursor:pointer}
+  .skill:hover{transform:translateX(6px);background:rgba(255,255,255,0.03)}
+  .skill .label{font-weight:700}
+  .skill .tag{font-size:13px;color:var(--muted);padding-left:10px}
+  .skills-visual{display:flex;justify-content:center;align-items:center}
+  .laptop{width:260px;max-width:100%;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.6);}
+
+  .contact-wrap{display:flex;flex-direction:column;align-items:center;gap:12px}
+  .socials{display:flex;gap:12px}
+  .socials a{background:rgba(255,255,255,0.06);padding:10px 12px;border-radius:10px;color:#fff;text-decoration:none;font-weight:700}
+
+  .final-boundary{background:#fff;margin-top:28px;border-radius:12px;color:#111;padding:18px;display:flex;flex-direction:column;gap:12px;align-items:center}
+  .final-boundary .label{font-weight:800;color:#111}
+  .final-boundary input{padding:10px 12px;border-radius:8px;border:1px solid rgba(0,0,0,0.08);width:260px}
+  .final-links{display:flex;gap:12px}
+  .final-links a{color:#111;text-decoration:none;font-weight:700;padding:8px 10px;background:rgba(0,0,0,0.06);border-radius:8px}
+
+  .reveal{opacity:0;transform:translateY(12px) scale(.99);transition:all .6s cubic-bezier(.2,.9,.3,1)}
+  .reveal.visible{opacity:1;transform:translateY(0) scale(1)}
+
+  @media (max-width:900px){
+    .about-grid,.skills-grid{grid-template-columns:1fr; text-align:center}
+    .home .meta{text-align:center}
+    nav{left:12px;transform:none;top:12px}
+    .final-boundary input{width:100%}
+  }
+  @media (max-width:480px){
+    .avatar{width:96px;height:96px;flex:0 0 96px}
+    nav{padding:6px 10px;gap:8px}
+    .btn{padding:8px 12px}
+  }
+</style>
+</head>
+
+<body>
+
+<!-- nav -->
+<nav aria-label="Primary navigation">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- Home -->
+<section id="home" class="home">
+  <div class="container">
+    <div class="card reveal">
+      <div class="avatar">
+        <img src="pic6.jpg" alt="Eyimegwu Odinaka Godspower">
+      </div>
+      <div class="meta">
+        <div class="name">Eyimegwu Odinaka Godspower</div>
+        <div class="role">Front-end Developer • Responsive & Interactive</div>
+        <p style="margin-top:8px">I build user-friendly web interfaces with HTML, CSS & JavaScript. I love clean UI, good UX and making sites feel alive.</p>
+        <div class="cta">
+          <a class="btn" href="https://wa.me/2347079839812" target="_blank" rel="noopener">WhatsApp: 2347079839812</a>
+          <a class="btn secondary" href="#contact">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="container reveal about-grid">
+    <div>
+      <h2>About Me</h2>
+      <p>I am <strong>Eyimegwu Odinaka Godspower</strong>. I’m a beginner front-end developer crafting clean and responsive web experiences. I enjoy turning design ideas into interactive pages and learning new tools to improve user experience.</p>
+      <p style="margin-top:8px;color:var(--muted)">Quick facts: I enjoy building micro projects, improving UI/UX, and learning new JavaScript features.</p>
+    </div>
+    <div class="about-photo" aria-hidden="true">
+      <img src="pic2.jpg" alt="Profile picture of Eyimegwu Odinaka Godspower">
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:18px">
+      <h2>Skills</h2>
+      <p style="max-width:760px;margin:auto;color:var(--muted)">I specialize in front-end development. Click a skill to see a short note.</p>
+    </div>
+
+    <div class="reveal skills-grid">
+      <div class="skills-list" id="skillsList" aria-live="polite">
+        <div class="skill" data-note="HTML — semantic structure & accessibility">
+          <div class="label">HTML</div>
+          <div class="tag">semantic & accessible</div>
+        </div>
+        <div class="skill" data-note="CSS — responsive layouts, Flexbox & Grid">
+          <div class="label">CSS</div>
+          <div class="tag">responsive design</div>
+        </div>
+        <div class="skill" data-note="JavaScript — DOM, events, dynamic UI">
+          <div class="label">JavaScript</div>
+          <div class="tag">interactive behavior</div>
+        </div>
+
+        <div id="skillNote" style="margin-top:12px;padding:10px;border-radius:8px;background:rgba(0,0,0,0.12);color:var(--muted)">
+          Click a skill to see more...
+        </div>
+      </div>
+
+      <div class="skills-visual" style="justify-content:center">
+        <img src="pic3.jpg" class="laptop" alt="Laptop example">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container reveal contact-wrap">
+    <div style="text-align:center">
+      <h2>Contact</h2>
+      <p style="color:var(--muted)">Reach out on WhatsApp for project inquiries, collaborations, or questions.</p>
+      <a class="btn" href="https://wa.me/07079839812" target="_blank" rel="noopener">Message on WhatsApp — 2347079839812</a>
+      <div class="socials" style="margin-top:12px">
+        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+
+    <div style="width:100%;max-width:760px;margin-top:22px">
+      <div class="final-boundary">
+        <div class="label">Gp powez</div>
+        <div style="width:100%;display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:center">
+          <input id="gpInput" placeholder="Write a short message..." />
+          <button class="btn" id="sendBtn">Send</button>
+        </div>
+        <div style="font-size:14px;color:#333">Also contact us on</div>
+        <div class="final-links">
+          <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="padding:18px;text-align:center;color:var(--muted)">© 2025 Eyimegwu Odinaka Godspower</footer>
+
+<script>
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add('visible');
+  });
+},{threshold:0.12});
+
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+const skillEls = document.querySelectorAll('.skill');
+const skillNote = document.getElementById('skillNote');
+skillEls.forEach(s=>{
+  s.addEventListener('click', ()=>{
+    const note = s.dataset.note || 'Skill info';
+    skillNote.textContent = note;
+    s.style.boxShadow = '0 6px 18px rgba(0,0,0,0.35)';
+    setTimeout(()=> s.style.boxShadow = 'none',400);
+  });
+});
+
+document.getElementById('sendBtn').addEventListener('click', ()=>{
+  const val = document.getElementById('gpInput').value.trim();
+  if(!val){ alert('Please write a short message before sending.'); return; }
+  const text = encodeURIComponent('Hello, '+ val);
+  window.open('https://wa.me/2347079839812?text=' + text, '_blank');
+});
+
+const sections = document.querySelectorAll('section[id]');
+const navlinks = document.querySelectorAll('nav a');
+window.addEventListener('scroll', ()=>{
+  let pos = window.scrollY + 120;
+  sections.forEach(sec=>{
+    if(sec.offsetTop <= pos && sec.offsetTop + sec.offsetHeight > pos){
+      navlinks.forEach(a=> a.classList.remove('active'));
+      const link = document.querySelector('nav a[href="#' + sec.id + '"]');
+      if(link) link.classList.add('active');
+    }
+  });
+});
+</script>
+</body>
+</html>
+
